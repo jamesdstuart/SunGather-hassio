@@ -8,11 +8,6 @@ if [ ! -f /share/SunGather/config.yaml ]; then
     cp config-hassio.yaml /share/SunGather/config.yaml
 fi
 
-if [ ! -f /share/SunGather/registers-sungrow.yaml ]; then
-    cp SunGather/registers-sungrow.yaml /share/SunGather/registers-sungrow.yaml
-fi
-
-
 INVERTER_HOST=$(bashio::config 'host')
 INTERVAL=$(bashio::config 'scan_interval')
 CONNECTION=$(bashio::config 'connection')
@@ -62,4 +57,4 @@ yq -i "
 " /share/SunGather/config.yaml
 
 source ./venv/bin/activate
-exec python3 /sungather.py -c /share/SunGather/config.yaml -l /share/SunGather/ -r /share/SunGather/registers-sungrow.yaml
+exec python3 /sungather.py -c /share/SunGather/config.yaml -l /share/SunGather/
