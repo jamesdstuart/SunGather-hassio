@@ -1,8 +1,8 @@
 name: "SunGather"
-version: "0.1.4"
+version: "0.1.5+"
 slug: sungather
 description: "Extract Sungrow data from local Inverter"
-arch: 
+arch:
   - armhf
   - armv7
   - aarch64
@@ -17,9 +17,9 @@ discovery:
   - "mqtt"
 services:
   - "mqtt:need"
-map: 
+map:
   - share:rw
-options: 
+options:
   host: 192.168.1.100
   timeout: 10
   scan_interval: 30
