@@ -9,7 +9,7 @@ if [ ! -f /share/SunGather/config.yaml ]; then
 fi
 
 if [ ! -f /share/SunGather/registers-sungrow.yaml ]; then
-    cp SunGather/SunGather/registers-sungrow.yaml /share/SunGather/registers-sungrow.yaml
+    cp SunGather/registers-sungrow.yaml /share/SunGather/registers-sungrow.yaml
 fi
 
 
